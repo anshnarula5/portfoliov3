@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  outline-color: rgba(66, 153, 225, 0.6);
+}
+
+:root {
+  scroll-behavior: smooth;
+}
 
 body {
   padding: 0;
