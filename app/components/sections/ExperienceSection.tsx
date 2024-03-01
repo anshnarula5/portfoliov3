@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const ExperienceSection = () => {
   return (
-    <section className='flex flex-col py-8' id='experience'>
+    <section className='flex flex-col pt-8 ' id='experience'>
       <Experience
         companyName="Kalam (YC '23)"
         date='NOV 2023'
