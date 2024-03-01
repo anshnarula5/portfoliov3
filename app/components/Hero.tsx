@@ -1,14 +1,43 @@
 "use client"
 
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Hero = () => {
-  const [activeLink, setActiveLink] = useState('');
+  const [currentSection, setCurrentSection] = useState('');
 
-  const handleLinkClick = (link: string) => {
-    setActiveLink(link);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          current = section.id;
+        }
+      });
+
+      setCurrentSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const NavItem = ({section}: {section: string}) => {
+    const isActive = section === currentSection;
+    return (
+      <Link href={`#${section}`} className={`group flex items-center py-3`}>
+      <span className={`${isActive && '!bg-slate-200 !w-16'} nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-12 group-hover:bg-slate-300 group-focus-within:w-8 group-focus-within:bg-slate-300 motion-reduce:transition-none`}></span>
+      <span className={`${isActive && '!text-slate-200'} nav-text text-xs font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-300 group-focus-within:text-slate-300`}>{section}</span>
+    </Link>
+    )
+  }
   return (
     <div className='flex-1 md:py-[6rem] md:h-screen !overflow-hidden !sticky top-0 flex md:flex-col md:justify-between'>
       <div className='flex flex-col gap-28'>
@@ -24,26 +53,11 @@ const Hero = () => {
           </p>
         </div>
         <div>
-        <Link href="#about" className={`group flex items-center py-3 `} onClick={() => handleLinkClick('#about')}>
-        <span className='nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-within:w-16 group-focus-within:bg-slate-200 motion-reduce:transition-none'></span>
-        <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-within:text-slate-200'>About</span>
-      </Link>
-          <Link href="#experience" className='group flex items-center  py-3'>
-            <span className='nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-within:w-16 group-focus-within:bg-slate-200 motion-reduce:transition-none'></span>
-            <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-within:text-slate-200'>Experience</span>
-          </Link>
-          <Link href="#projects" className='group flex items-center  py-3'>
-            <span className='nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-within:w-16 group-focus-within:bg-slate-200 motion-reduce:transition-none'></span>
-            <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-within:text-slate-200'>Projects</span>
-          </Link>
-          <Link href="#tech" className='group flex items-center  py-3'>
-            <span className='nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-within:w-16 group-focus-within:bg-slate-200 motion-reduce:transition-none'></span>
-            <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-within:text-slate-200'>Tech Stack</span>
-          </Link>
-          <Link href="#blogs" className='group flex items-center  py-3'>
-            <span className='nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-within:w-16 group-focus-within:bg-slate-200 motion-reduce:transition-none'></span>
-            <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-within:text-slate-200'>Blogs</span>
-          </Link>
+          <NavItem section='about' />
+          <NavItem section='experience' />
+          <NavItem section='projects' />
+          <NavItem section='tech' />
+          <NavItem section='blogs' />
         </div>
       </div>
 
