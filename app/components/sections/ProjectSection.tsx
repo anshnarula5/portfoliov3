@@ -3,7 +3,7 @@ import Project from '../Project'
 
 const ProjectSection = () => {
   return (
-    <section className='flex flex-col py-8 h-screen' id='projects'>
+    <section className='flex flex-col py-8' id='projects'>
       <Project
         name="JobPulse"
         poster="/jobtracker.webp"

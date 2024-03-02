@@ -29,13 +29,13 @@ const Hero = () => {
     };
   }, []);
 
-  const NavItem = ({section}: {section: string}) => {
+  const NavItem = ({ section }: { section: string }) => {
     const isActive = section === currentSection;
     return (
-      <Link href={`#${section}`} className={`group flex items-center py-3`}>
-      <span className={`${isActive && '!bg-slate-200 !w-16'} nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-12 group-hover:bg-slate-300 group-focus-within:w-8 group-focus-within:bg-slate-300 motion-reduce:transition-none`}></span>
-      <span className={`${isActive && '!text-slate-200'} nav-text text-xs font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-300 group-focus-within:text-slate-300`}>{section}</span>
-    </Link>
+      <Link href={`#${section}`} className={`group flex items-center py-3`} onClick={() => { setCurrentSection(section) }}>
+        <span className={`${isActive && '!bg-slate-200 !w-16'} nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-12 group-hover:bg-slate-300 group-focus-within:w-8 group-focus-within:bg-slate-300 motion-reduce:transition-none`}></span>
+        <span className={`${isActive && '!text-slate-200'} nav-text text-xs font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-300 group-focus-within:text-slate-300`}>{section}</span>
+      </Link>
     )
   }
   return (
