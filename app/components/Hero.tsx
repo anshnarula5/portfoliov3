@@ -39,10 +39,10 @@ const Hero = () => {
     )
   }
   return (
-    <div className='flex-1 md:py-[6rem] md:h-screen !overflow-hidden !sticky top-0 flex md:flex-col md:justify-between'>
+    <div className='flex-1 md:py-[6rem] min-h-screen lg:min-h-max md:h-screen !overflow-hidden lg:!sticky top-0 flex flex-col justify-center md:justify-between'>
       <div className='flex flex-col gap-28'>
         <div>
-          <h1 className='font-bold md:text-5xl tracking-tight text-slate-50'>
+          <h1 className='font-bold text-3xl md:text-5xl tracking-tight text-slate-50'>
             Ansh Narula
           </h1>
           <h2 className='mt-3 md:text-2xl text-slate-200'>
@@ -52,7 +52,7 @@ const Hero = () => {
             JavaScript, TypeScript, C++, Java proficient full-stack engineer integrating AWS, seeking innovative projects and collaborative growth.
           </p>
         </div>
-        <div>
+        <div className='hidden lg:block'>
           <NavItem section='about' />
           <NavItem section='experience' />
           <NavItem section='projects' />
@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div>
+      <div className='hidden lg:block'>
         links
       </div>
     </div>
