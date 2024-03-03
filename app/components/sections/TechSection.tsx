@@ -4,8 +4,9 @@ import TechCard from '../Tech'
 
 const TechSection = () => {
   return (
-    <section className='flex flex-col items-center justify-center lg:pl-16 w-full' id='tech'>
-      <div className='flex flex-wrap gap-2 lg:gap-3 w-full'>
+    <section className='flex flex-col gap-4 lg:gap-6 w-full lg:pl-16 py-12' id='tech'>
+    <h2 className='text-slate-200 text-2xl'>Tech Stack</h2>
+      <div className='flex flex-wrap gap-2 lg:gap-3 w-full '>
         <TechCard img="/tech/javascript.svg" name="Javascript" />
         <TechCard img="/tech/java.png" name="Java" />
         <TechCard img="/tech/c.svg" name="C++" />

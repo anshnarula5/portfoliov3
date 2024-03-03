@@ -48,7 +48,7 @@ const Hero = () => {
           <h2 className='mt-3 md:text-2xl text-slate-200'>
             Seeking new opportunities
           </h2>
-          <p className='mt-4'>
+          <p className='mt-4 max-w-[25rem]'>
             JavaScript, TypeScript, C++, Java proficient full-stack engineer integrating AWS, seeking innovative projects and collaborative growth.
           </p>
         </div>
@@ -60,7 +60,6 @@ const Hero = () => {
           <NavItem section='blogs' />
         </div>
       </div>
-
       <div className='hidden lg:block'>
         links
       </div>
