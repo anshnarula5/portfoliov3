@@ -2,9 +2,11 @@
 
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { EmailIcon, GithubIcon, LinkedInIcon } from './Icons';
 
 const Hero = () => {
   const [currentSection, setCurrentSection] = useState('');
+  const [hoveredIcon, setHoveredIcon] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +40,18 @@ const Hero = () => {
       </Link>
     )
   }
+
+  const HoverableIcon = ({ icon: IconComponent, defaultColor, hoverColor, link, className }: any) => {
+    const [isHovered, setIsHovered] = useState(false);
+    return (
+      <a href={link} target='_blank' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >
+        <div className="icon-container">
+          <IconComponent className={`${className} icon`} color={isHovered ? hoverColor : defaultColor} />
+        </div>
+      </a>
+    );
+  };
+
   return (
     <div className='flex-1 md:py-[6rem] min-h-screen lg:min-h-max md:h-screen !overflow-hidden lg:!sticky top-0 flex flex-col justify-center md:justify-between'>
       <div className='flex flex-col gap-28'>
@@ -60,8 +74,10 @@ const Hero = () => {
           <NavItem section='blogs' />
         </div>
       </div>
-      <div className='hidden lg:block'>
-        links
+      <div className='hidden lg:flex gap-4 items-center'>
+        <HoverableIcon icon={LinkedInIcon} className="lg:w-6 lg:h-6 transition-all" defaultColor="#94a3b8" hoverColor="#f1f5f9" link="https://www.linkedin.com/in/anshnarula/" />
+        <HoverableIcon icon={GithubIcon} className="lg:w-6 lg:h-6 transition-all" defaultColor="#94a3b8" hoverColor="#f1f5f9" link="https://github.com/anshnarula5" />
+        <HoverableIcon icon={EmailIcon} className="lg:w-8 lg:h-8 transition-all" defaultColor="#94a3b8" hoverColor="#f1f5f9" link="mailto:anshnarula55@gmail.com" />
       </div>
     </div>
   )
