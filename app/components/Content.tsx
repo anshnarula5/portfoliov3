@@ -3,6 +3,7 @@ import ExperienceSection from './sections/ExperienceSection'
 import ProjectSection from './sections/ProjectSection'
 import TechSection from './sections/TechSection'
 import BlogSection from './sections/BlogSection'
+import ContactSection from './sections/ContactSection'
 
 const Content = () => {
   return (
@@ -11,6 +12,7 @@ const Content = () => {
       <ProjectSection />
       <TechSection />
       <BlogSection />
+      <ContactSection />
     </div>
   )
 }
