@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import emailjs from "emailjs-com";
+import AnimatedContainer from '../AnimatedContainer';
 
 const ContactSection = () => {
   const [loading, setLoading] = useState(false);
@@ -57,9 +58,9 @@ const ContactSection = () => {
 
   const Toast = ({ message, type }: any) => (
     <div className='fixed w-full top-8 left-0  flex items-center justify-center mx-auto'>
-      <div className={`${type === 'error' ? 'bg-red-400' : ' bg-green-400'} px-8 py-2  text-center w-fit rounded-lg text-black`}>
+      <AnimatedContainer slideDown className={`${type === 'error' ? 'bg-red-400' : ' bg-green-400'} px-8 py-2  text-center w-fit rounded-lg text-black`}>
         {message}
-      </div>
+      </AnimatedContainer>
     </div>
   )
 
