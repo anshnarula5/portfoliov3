@@ -2,6 +2,7 @@ import React from 'react'
 import ExperienceSection from './sections/ExperienceSection'
 import ProjectSection from './sections/ProjectSection'
 import TechSection from './sections/TechSection'
+import BlogSection from './sections/BlogSection'
 
 const Content = () => {
   return (
@@ -9,6 +10,7 @@ const Content = () => {
       <ExperienceSection />
       <ProjectSection />
       <TechSection />
+      <BlogSection />
     </div>
   )
 }

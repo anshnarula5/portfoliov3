@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito_sans.className} bg-[#0f172a] max-w-[80rem] mx-auto`}>{children}</body>
+      <body className={`${nunito_sans.className} bg-[#0f172a] max-w-[80rem] mx-auto overflow-x-hidden`}>{children}</body>
     </html>
   );
 }
