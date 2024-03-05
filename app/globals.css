@@ -18,10 +18,13 @@ body {
   margin: 0;
 }
 
+.spotlight{
+  background: radial-gradient(600px at 1161px 965.273px, rgba(29, 78, 216, 0.15), transparent 80%);
+}
 
 .fill-animation {
   background: linear-gradient(to right, #a5f2f3de 50%, #0f172a 50%);
-  background-size: 200% 100%;
+  background-size: 250% 100%;
   background-position: right bottom;
   transition: all .2s ease-in-out;
 }

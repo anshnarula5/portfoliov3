@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="relative">
       <body className={`${nunito_sans.className} bg-[#0f172a] max-w-[80rem] mx-auto overflow-x-hidden`}>{children}</body>
     </html>
   );
