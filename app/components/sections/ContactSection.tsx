@@ -53,6 +53,7 @@ const ContactSection = () => {
         );
       setFormData({ username: "", message: "", email: "" });
     }
+    setFormData({ username: "", message: "", email: "" });
     setLoading(false);
   };
 
@@ -65,7 +66,7 @@ const ContactSection = () => {
   )
 
   return (
-    <div className='flex flex-col gap-4 pt-6 pb-20'>
+    <div className='flex flex-col gap-4 pt-6 pb-10'>
       <div className='fixed w-full top-4 left-0  flex items-center justify-center mx-auto'>
         {toast.message && <Toast message={toast.message} type={toast.type} />
         }

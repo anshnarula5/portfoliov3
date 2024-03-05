@@ -18,6 +18,7 @@ body {
   margin: 0;
 }
 
+
 .fill-animation {
   background: linear-gradient(to right, #a5f2f3de 50%, #0f172a 50%);
   background-size: 200% 100%;
@@ -29,15 +30,11 @@ body {
   background-position: left bottom;
 }
 
-@keyframes fill {
-  0% {
-      background-position: -300px 0; /* Start position for gradient */
-  }
-  100% {
-      background-position: 0 0; /* End position for gradient */
-  }
-}
 
+::selection {
+  color: black;
+  background: rgba(69, 236, 236, 0.691);
+}
 
 .glow-on-hover {
   cursor: pointer;
