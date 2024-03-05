@@ -2,11 +2,12 @@ import React from 'react'
 import Tag from './Tag'
 import Image from 'next/image'
 import { LinkedInIcon } from './Icons'
+import AnimatedContainer from './AnimatedContainer'
 
 const Experience =
-  ({ companyName, position, description, tags, logo, date }: { companyName: string, position: string, description: string, tags: string[], logo: any, date: string }) => {
+  ({ companyName, position, description, tags, logo, date, delay }: { companyName: string, position: string, description: string, tags: string[], logo: any, date: string, delay: number }) => {
     return (
-      <div className='flex flex-row gap-2 lg:gap-4'>
+      <AnimatedContainer slideLeft yMargin='-10%' delay={delay} className='flex flex-row gap-2 lg:gap-4 group'>
         <div className='flex flex-row gap-2'>
           <div className='text-[13px] pt-6 lg:min-w-[4.5rem] hidden lg:block'>{date}</div>
           <div className='flex flex-col items-center flex-grow gap-4  pt-6'>
@@ -16,9 +17,9 @@ const Experience =
             <span className='bg-slate-300 w-px h-full'></span>
           </div>
         </div>
-        <div className='hover:translate-x-1 flex flex-col gap-4  lg:hover:bg-opacity-20 rounded-lg transition-all duration-200  px-4 pt-4 pb-8 cursor-default'>
+        <div className='group group-hover:translate-x-1 flex flex-col gap-4  lg:hover:bg-opacity-20 rounded-lg transition-all duration-200  px-4 pt-4 pb-8 cursor-default'>
           <div>
-            <h2 className='font-[700] text-slate-200 text-lg'>{companyName}</h2>
+            <h2 className='font-[700] text-slate-200 text-lg fill-animation group-hover:text-black w-fit'>{companyName}</h2>
             <h3 className=' text-slate-300'>{position}</h3>
           </div>
           <div>{description}</div>
@@ -28,7 +29,7 @@ const Experience =
             ))}
           </div>
         </div>
-      </div>
+      </AnimatedContainer>
     )
   }
 

@@ -44,7 +44,7 @@ const Hero = () => {
   const HoverableIcon = ({ icon: IconComponent, defaultColor, hoverColor, link, className }: any) => {
     const [isHovered, setIsHovered] = useState(false);
     return (
-      <a href={link} target='_blank' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >
+      <a href={link} target='_blank' className='hover:-translate-y-2 transition-transform' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >
         <div className="icon-container">
           <IconComponent className={`${className} icon`} color={isHovered ? hoverColor : defaultColor} />
         </div>
@@ -52,9 +52,12 @@ const Hero = () => {
     );
   };
 
+  const handleHireClick = () => {
+    window.open("mailto:anshnarula55@gmail.com?subject=I have an offer!", "_blank");
+  }
   return (
-    <div className='flex-1 md:py-[6rem] min-h-screen lg:min-h-max md:h-screen !overflow-hidden lg:!sticky top-0 flex flex-col justify-center md:justify-between'>
-      <div className='flex flex-col gap-28'>
+    <div className='pl-2 flex-1 md:py-[5rem] min-h-screen lg:min-h-max md:h-screen !overflow-hidden lg:!sticky top-0 flex flex-col justify-center md:justify-between'>
+      <div className='flex flex-col gap-20'>
         <div>
           <h1 className='font-bold text-3xl md:text-5xl tracking-tight text-slate-50'>
             Ansh Narula
@@ -65,6 +68,9 @@ const Hero = () => {
           <p className='mt-4 max-w-[25rem]'>
             JavaScript, TypeScript, C++, Java proficient full-stack engineer integrating AWS, seeking innovative projects and collaborative growth.
           </p>
+          {/* <Link href="#blogs"  className='mt-8 px-6 py-2 text-white transition-all hover:text-black font-[700] lg:text-lg glow-on-hover'>
+            Hire Me!
+          </Link> */}
         </div>
         <div className='hidden lg:block'>
           <NavItem section='about' />

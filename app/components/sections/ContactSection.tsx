@@ -58,14 +58,14 @@ const ContactSection = () => {
 
   const Toast = ({ message, type }: any) => (
     <div className='fixed w-full top-8 left-0  flex items-center justify-center mx-auto'>
-      <AnimatedContainer slideDown className={`${type === 'error' ? 'bg-red-400' : ' bg-green-400'} px-8 py-2  text-center w-fit rounded-lg text-black`}>
+      <AnimatedContainer slideDown className={`${type === 'error' ? 'bg-red-400' : ' bg-green-400'} shadow-md shadow-black px-8 py-2  text-center w-fit rounded-lg text-black`}>
         {message}
       </AnimatedContainer>
     </div>
   )
 
   return (
-    <div className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-4 pt-6 pb-20'>
       <div className='fixed w-full top-4 left-0  flex items-center justify-center mx-auto'>
         {toast.message && <Toast message={toast.message} type={toast.type} />
         }
@@ -76,22 +76,22 @@ const ContactSection = () => {
       </span>
       <form className="w-full my-4 flex flex-col gap-4" id="form">
         <div className='flex flex-col md:flex-row gap-2 w-full '>
-          <div className="w-full">
+          <div className="w-full flex flex-col gap-2">
             <label className="">Your email</label>
             <input type="email" id="email" name="email" className="text-gray-900 text-sm rounded-lg block w-full p-2.5" onChange={(e) => handleChange({ e })} required />
           </div>
-          <div className="w-full">
+          <div className="w-full flex flex-col gap-2">
             <label className="">Name</label>
             <input type="text" name="username" className="text-gray-900 text-sm rounded-lg block w-full p-2.5" onChange={(e) => handleChange({ e })} required />
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full flex flex-col gap-2">
           <label className="">Message</label>
           <input type="text" name="message" className="text-gray-900 text-sm rounded-lg block w-full p-2.5" onChange={(e) => handleChange({ e })} required />
         </div>
       </form>
-      <button onClick={(e) => sendEmail({ e })} type="submit" className="my-2 w-fit text-white bg-blue-700 hover:bg-blue-800 transition-all font-medium rounded-lg px-5 py-2.5 ">
-        {!loading ? 'Submit' : <span className='animate-spin'></span>}
+      <button onClick={(e) => sendEmail({ e })} type="submit" className="my-2 w-fit text-black bg-cyan-500 hover:bg-cyan-200 transition-all font-medium rounded-lg px-5 py-2 ">
+        {!loading ? 'Send' : <span className='animate-spin'></span>}
       </button>
     </div>
   )

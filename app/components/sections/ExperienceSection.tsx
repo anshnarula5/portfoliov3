@@ -1,13 +1,17 @@
 import React from 'react'
 import Experience from '../Experience'
 import Image from 'next/image'
+import AnimatedContainer from '../AnimatedContainer'
 
 const ExperienceSection = () => {
   return (
     <section className='flex flex-col gap-4 lg:gap-6 py-12' id='experience'>
+      <AnimatedContainer slideUp>
       <h2 className='text-slate-200 text-2xl'>Experience</h2>
+      </AnimatedContainer>
       <div>
         <Experience
+          delay={0.1}
           companyName="Kalam (YC '23)"
           date='NOV 2023'
           position='Full Stack Development Intern'
@@ -16,6 +20,7 @@ const ExperienceSection = () => {
           tags={["NextJs", "TypeScript", "NextJS", "Tailwind", "Framer Motion"]}
         />
         <Experience
+          delay={0.25}
           companyName="Amazon"
           date='JAN 2023'
           logo={<Image src="/amazon-64.png" alt='Amazon' fill />}
@@ -24,6 +29,7 @@ const ExperienceSection = () => {
           tags={["Java", "AWS", "TypeScript", "JUinit", "Mockito", "SDLC"]}
         />
         <Experience
+          delay={0.4}
           companyName="BioBazaar"
           date='MAY 2022'
           logo={<Image src="/biobazaar.png" alt='Biobazaar' fill />}

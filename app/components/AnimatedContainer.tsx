@@ -1,3 +1,5 @@
+"use client"
+
 import React, { ReactNode, useState } from 'react';
 import cls from 'classnames';
 import { InView } from 'react-intersection-observer';
@@ -9,17 +11,19 @@ interface AnimatedContainerProps {
   yMargin?: string;
   slideUp?: boolean;
   slideDown?: boolean;
+  slideLeft?: boolean;
   duration?: number;
   animateOpacity?: boolean;
 }
 
 const AnimatedContainer = ({
   children,
-  delay = 0.2,
+  delay = 0,
   className = '',
-  yMargin = '-30%',
+  yMargin = '-5%',
   slideUp = false,
   slideDown = false,
+  slideLeft = false,
   duration = 0.2,
   animateOpacity = true,
 }: AnimatedContainerProps) => {
@@ -36,8 +40,10 @@ const AnimatedContainer = ({
         { 'translate-y-0': slideUp && slideDown && isVisible },
         { 'translate-y-4': slideUp && !isVisible },
         { '-translate-y-4': slideDown && !isVisible },
-        { 'scale-100': !slideUp && !slideDown && isVisible },
-        { 'scale-[.93]': !slideUp && !slideDown && !isVisible }
+        { 'translate-x-0' : slideLeft && isVisible},
+        { '-translate-x-4' : slideLeft && !isVisible},
+        { 'scale-100': !slideUp && !slideDown && !slideLeft && isVisible },
+        { 'scale-[.93]': !slideUp && !slideDown && !slideLeft && !isVisible }
       )}
       style={{
         transition: `opacity ${duration}s cubic-bezier(0.84, 1.8, 1, 1) ${delay}s, 
