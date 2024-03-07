@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Nunito_Sans } from "next/font/google";
 import "./globals.css";
-
+import { GoogleAnalytics } from '@next/third-parties/google'
+ 
 export const metadata: Metadata = {
   title: "Ansh Narula",
   description: "JavaScript, TypeScript, C++, Java proficient full-stack engineer integrating AWS, seeking innovative projects and collaborative growth.",
@@ -24,6 +25,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" sizes="any" />
         {children}
       </body>
+      <GoogleAnalytics gaId="G-JRL5Y4FK9N" />
     </html>
   );
 }
