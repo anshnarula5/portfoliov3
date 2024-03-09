@@ -71,7 +71,9 @@ const ContactSection = () => {
         {toast.message && <Toast message={toast.message} type={toast.type} />
         }
       </div>
-      <h2 className='text-slate-200 text-2xl'>Reach out to me</h2>
+      <AnimatedContainer slideUp>
+        <h2 className='text-slate-200 text-2xl'>Reach out to me</h2>
+      </AnimatedContainer>
       <span>
         For any inquiries, project discussions, or simply to connect, please feel free to reach out. My inbox is open, and I look forward to engaging with you
       </span>

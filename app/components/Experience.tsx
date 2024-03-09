@@ -5,9 +5,13 @@ import { LinkedInIcon } from './Icons'
 import AnimatedContainer from './AnimatedContainer'
 
 const Experience =
-  ({ companyName, position, description, tags, logo, date, delay }: { companyName: string, position: string, description: string, tags: string[], logo: any, date: string, delay: number }) => {
+  ({ companyName, position, description, tags, logo, date, delay, link }: { companyName: string, position: string, description: string, tags: string[], logo: any, date: string, delay: number, link:string }) => {
+    const handleClick = () => {
+      window.open(link, "_blank");
+    }
     return (
-      <AnimatedContainer slideLeft yMargin='-10%' delay={delay} className='flex flex-row gap-2 lg:gap-2 group'>
+      <AnimatedContainer slideLeft yMargin='-10%' delay={delay} className=''>
+        <div className='cursor-pointer flex flex-row gap-2 lg:gap-2 group' onClick={handleClick}>
         <div className='flex flex-row gap-2'>
           <div className='text-[13px] pt-6 lg:min-w-[4.5rem] hidden lg:block'>{date}</div>
           <div className='flex flex-col items-center flex-grow gap-4  pt-6'>
@@ -17,7 +21,7 @@ const Experience =
             <span className='bg-slate-300 w-px h-full'></span>
           </div>
         </div>
-        <div className='group group-hover:translate-x-1 flex flex-col gap-4  lg:hover:bg-opacity-20 rounded-lg transition-all duration-200  px-4 pt-4 pb-8 cursor-default'>
+        <div className='group group-hover:translate-x-1 flex flex-col gap-4  lg:hover:bg-opacity-20 rounded-lg transition-all duration-200  px-4 pt-4 pb-8 '>
           <div>
             <h2 className='font-[700] text-slate-200 text-lg fill-animation group-hover:text-black w-fit px-1'>{companyName}</h2>
             <h3 className=' text-slate-300 pl-1'>{position}</h3>
@@ -28,6 +32,7 @@ const Experience =
               <Tag name={tag} />
             ))}
           </div>
+        </div>
         </div>
       </AnimatedContainer>
     )

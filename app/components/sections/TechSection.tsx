@@ -1,11 +1,14 @@
 import React from 'react'
 import TechCard from '../Tech'
+import AnimatedContainer from '../AnimatedContainer'
 
 
 const TechSection = () => {
   return (
     <section className='flex flex-col gap-4 lg:gap-6 w-full lg:pl-16 py-12' id='tech'>
-    <h2 className='text-slate-200 text-2xl'>Tech Stack</h2>
+      <AnimatedContainer slideUp>
+        <h2 className='text-slate-200 text-2xl'>Tech Stack</h2>
+      </AnimatedContainer>
       <div className='flex flex-wrap gap-2 lg:gap-3 w-full '>
         <TechCard img="/tech/javascript.svg" name="Javascript" />
         <TechCard img="/tech/java.png" name="Java" />

@@ -7,10 +7,11 @@ const ExperienceSection = () => {
   return (
     <section className='flex flex-col gap-4 lg:gap-6 py-12' id='experience'>
       <AnimatedContainer slideUp>
-      <h2 className='text-slate-200 text-2xl'>Experience</h2>
+        <h2 className='text-slate-200 text-2xl'>Experience</h2>
       </AnimatedContainer>
       <div>
         <Experience
+          link='https://kalam.in/'
           delay={0.1}
           companyName="Kalam (YC '23)"
           date='NOV 2023'
@@ -20,6 +21,7 @@ const ExperienceSection = () => {
           tags={["NextJs", "TypeScript", "NextJS", "Tailwind", "Framer Motion"]}
         />
         <Experience
+          link='https://www.linkedin.com/company/amazon/'
           delay={0.25}
           companyName="Amazon"
           date='JAN 2023'
@@ -29,6 +31,7 @@ const ExperienceSection = () => {
           tags={["Java", "AWS", "TypeScript", "JUinit", "Mockito", "SDLC"]}
         />
         <Experience
+          link='/'
           delay={0.4}
           companyName="BioBazaar"
           date='MAY 2022'

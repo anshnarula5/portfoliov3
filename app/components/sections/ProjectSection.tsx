@@ -1,10 +1,13 @@
 import React from 'react'
 import Project from '../Project'
+import AnimatedContainer from '../AnimatedContainer'
 
 const ProjectSection = () => {
   return (
     <section className='flex flex-col py-12 gap-4 lg:gap-6' id='projects'>
-      <h2 className='text-slate-200 text-2xl'>Projects</h2>
+     <AnimatedContainer slideUp>
+        <h2 className='text-slate-200 text-2xl'>Projects</h2>
+      </AnimatedContainer>
       <div className='flex flex-col gap-6 lg:gap-2'>
         <Project
           name="JobPulse"

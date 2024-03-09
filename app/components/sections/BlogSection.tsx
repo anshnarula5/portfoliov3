@@ -1,10 +1,13 @@
 import React from 'react'
 import Blog from '../Blog'
+import AnimatedContainer from '../AnimatedContainer'
 
 const BlogSection = () => {
   return (
     <section className='flex flex-col gap-4 lg:gap-6 py-12' id='blogs'>
-      <h2 className='text-slate-200 text-2xl'>Blogs</h2>
+     <AnimatedContainer slideUp>
+        <h2 className='text-slate-200 text-2xl'>Blogs</h2>
+      </AnimatedContainer>
       <div className='flex flex-wrap gap-5'>
         <Blog
           image="/edi.webp"

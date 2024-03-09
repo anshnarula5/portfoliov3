@@ -20,7 +20,7 @@ const AnimatedContainer = ({
   children,
   delay = 0,
   className = '',
-  yMargin = '-5%',
+  yMargin = '-15%',
   slideUp = false,
   slideDown = false,
   slideLeft = false,
