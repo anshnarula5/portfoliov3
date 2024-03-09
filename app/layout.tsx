@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Spotlight from "./components/Spotlight";
  
 export const metadata: Metadata = {
   title: "Ansh Narula",
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="relative">
+      <Spotlight />
       <body className={`${nunito_sans.className} bg-[#0f172a] max-w-[80rem] mx-auto overflow-x-hidden`}>
         <link rel="icon" href="/favicon.png" sizes="any" />
         {children}

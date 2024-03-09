@@ -9,7 +9,7 @@ const ExperienceSection = () => {
       <AnimatedContainer slideUp>
         <h2 className='text-slate-200 text-2xl'>Experience</h2>
       </AnimatedContainer>
-      <div>
+      <ul className='group/list'>
         <Experience
           link='https://kalam.in/'
           delay={0.1}
@@ -40,7 +40,7 @@ const ExperienceSection = () => {
           description='Worked in a b2b tech team for a pharmaceutical product firm, contributing to front-end and back-end microservices. Developed tools, features, and testing programs to enhance order processing, billing, and daily operations, improving lead time and profit.'
           tags={["ReactJs", "JavaScript", "TypeScript", "NodeJs", "PostgreSQL", "Mocha"]}
         />
-      </div>
+      </ul>
     </section>
   )
 }

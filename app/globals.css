@@ -91,3 +91,16 @@ body {
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
+
+
+.spotlight {
+  position: fixed;
+  width: 50em;
+  height: 50rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(29, 79, 216, 0.258) 12%, rgba(255, 255, 255, 0) 50%);
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+  opacity: 15%;
+}

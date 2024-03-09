@@ -22,9 +22,9 @@ const Project = ({ poster, name, projectLink, github, description, moreDetails, 
       <div className='flex flex-col gap-2'>
         <div className='flex justify-between items-center group'>
           <h2 className={`font-[700] group text-lg text-slate-400 group-hover:text-cyan-200 ${gradientText}`}>
-            <a href={projectLink} target='_blank' className='flex items-center gap-1 '>
+            <a href={projectLink} target='_blank' className='flex items-center gap-1 group/link '>
               <span>{name}</span>
-              <RightArrowIcon color='#FFFFFF' className='-rotate-45 md:rotate-0 md:group-hover:-rotate-45 transition-all' />
+              <RightArrowIcon color='#FFFFFF' className='-rotate-45 md:rotate-0 md:group-hover:-rotate-45 md:group-hover/link:translate-x-1 md:group-hover/link:-translate-y-1 transition-all' />
             </a>
             </h2>
           <div className='w-5 h-5 md:w-6 md:h-6 relative text-cyan-100'>

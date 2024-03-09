@@ -14,8 +14,12 @@ const Spotlight = () => {
   }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute spotlight"  
-    style={{ left: position.x - 1161, top: position.y - 965.273 }} ></div>
+    <div className='spotlight-container'>
+      <div
+        className="spotlight"
+        style={{ left: position.x - 400, top: position.y - 400 }}
+      />
+    </div>
   );
 };
 
