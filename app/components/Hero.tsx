@@ -44,7 +44,7 @@ const Hero = () => {
   const HoverableIcon = ({ icon: IconComponent, defaultColor, hoverColor, link, className }: any) => {
     const [isHovered, setIsHovered] = useState(false);
     return (
-      <a href={link} target='_blank' className='hover:-translate-y-2 transition-transform' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >
+      <a aria-label="Social Link" href={link} target='_blank' className='hover:-translate-y-2 transition-transform' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >
         <div className="icon-container">
           <IconComponent className={`${className} icon`} color={isHovered ? hoverColor : defaultColor} />
         </div>

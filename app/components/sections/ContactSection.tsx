@@ -80,17 +80,17 @@ const ContactSection = () => {
       <form className="w-full my-4 flex flex-col gap-4" id="form">
         <div className='flex flex-col md:flex-row gap-2 w-full '>
           <div className="w-full flex flex-col gap-2">
-            <label className="">Your email</label>
+            <label htmlFor='email' className="">Your email</label>
             <input type="email" id="email" name="email" className="text-gray-900 text-sm rounded-lg block w-full p-2.5" onChange={(e) => handleChange({ e })} required />
           </div>
           <div className="w-full flex flex-col gap-2">
-            <label className="">Name</label>
-            <input type="text" name="username" className="text-gray-900 text-sm rounded-lg block w-full p-2.5" onChange={(e) => handleChange({ e })} required />
+            <label htmlFor='username' className="">Name</label>
+            <input type="text"  id="username" name="username" className="text-gray-900 text-sm rounded-lg block w-full p-2.5" onChange={(e) => handleChange({ e })} required />
           </div>
         </div>
         <div className="w-full flex flex-col gap-2">
-          <label className="">Message</label>
-          <input type="text" name="message" className="text-gray-900 text-sm rounded-lg block w-full p-2.5" onChange={(e) => handleChange({ e })} required />
+          <label htmlFor='message' className="">Message</label>
+          <input type="text" id='message' name="message" className="text-gray-900 text-sm rounded-lg block w-full p-2.5" onChange={(e) => handleChange({ e })} required />
         </div>
       </form>
       <button onClick={(e) => sendEmail({ e })} type="submit" className="my-2 w-fit text-black bg-cyan-500 hover:bg-cyan-200 transition-all font-medium rounded-lg px-5 py-2 ">
