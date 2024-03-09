@@ -36,7 +36,7 @@ const ProjectSection = () => {
         <Project
           name='Cinepedia'
           delay={0.55}
-          poster="/movie.webp"
+          poster="/cinepedia.webp"
           description='This movie browsing mobile application offers an extensive collection of films across various genres.'
           moreDetails='Implemented robust search functionality, including search history for quick access to previous searches. Designed and implemented a rating system, enabling users to rate movies and share their feedback through comments, fostering user interaction and community engagement. Implemented user authentication and personalized features such as wishlists and favorites exclusively for authenticated users, enhancing user engagement and retention. With its user-centric design and an extensive database of movies, this application serves as a go-to resource for movie enthusiasts.'
           projectLink='https://github.com/anshnarula5/movies'
