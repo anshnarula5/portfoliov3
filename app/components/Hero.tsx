@@ -66,7 +66,12 @@ const Hero = () => {
             Seeking new opportunities
           </h2>
           <p className='mt-4 max-w-[25rem]'>
-            JavaScript, TypeScript, C++, Java proficient full-stack engineer integrating AWS, seeking innovative projects and collaborative growth.
+          Experienced full-stack engineer with expertise in JavaScript, C++, and Java, profecient in building scalable, high-performance applications. 
+          <br />         
+          <br />         
+          Skilled in integrating cloud platforms (AWS, Google Cloud) and building event-driven architectures for robust, efficient systems.
+
+
           </p>
           {/* <Link href="#blogs"  className='mt-8 px-6 py-2 text-white transition-all hover:text-black font-[700] lg:text-lg glow-on-hover'>
             Hire Me!

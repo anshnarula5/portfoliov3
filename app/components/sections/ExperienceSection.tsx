@@ -10,12 +10,23 @@ const ExperienceSection = () => {
         <h2 className='text-slate-200 text-2xl'>Experience</h2>
       </AnimatedContainer>
       <ul className='group/list'>
-        <Experience
-          link='https://kalam.in/'
+      <Experience
+          link='https://superkalam.com/'
           delay={0.1}
-          companyName="Kalam (YC '23)"
+          companyName="RedHealth"
+          date='JUN 2024'
+          position='SDE 1'
+          logo={<Image src="/red1.jpg" alt='Kalam' fill />}
+          description='Developed Salus EMS, a real-time communication platform connecting paramedics with doctors to support life-saving interventions.
+Implemented event-driven architecture with Google Cloud Pub/Sub and Nest.js for efficient, reliable emergency data processing.'
+          tags={["NextJs", "TypeScript", "GCP", "Postgres", "Jenkins"]}
+        />
+        <Experience
+          link='https://superkalam.com/'
+          delay={0.1}
+          companyName="SuperKalam (YC '23)"
           date='NOV 2023'
-          position='Full Stack Development Intern'
+          position='Full Stack Developer'
           logo={<Image src="/kalam-logo-1.png" alt='Kalam' fill />}
           description='Developed web pages using Next.js, Tailwind CSS, and Framer Motion. Integrated Razorpay for secure transactions, utilized webhooks for personalized notifications. Improved load times by 40%, enhanced SEO by 25%.'
           tags={["NextJs", "TypeScript", "NextJS", "Tailwind", "Framer Motion"]}
