@@ -11,7 +11,7 @@ const AboutSection = () => {
       </p>
       <p>
         With  <span className={basicHighlight}>~1.4</span> years of hands-on experience across multiple roles,
-        I specialize in building <span className={basicHighlight}> scalable, efficient backend infrastructures</span>
+        I specialize in building <span className={basicHighlight}> scalable, efficient backend infrastructures</span>{" "}
         and creating <span className={basicHighlight}>user-friendly, pixel-perfect </span> web applications.
         </p>
         <p>
