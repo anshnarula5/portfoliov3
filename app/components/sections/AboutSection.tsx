@@ -7,7 +7,6 @@ const AboutSection = () => {
     <section className='py-12 flex flex-col md:text-lg gap-4 tracking-wide group cursor-default' id='about'>
       <p>
         Hi there 👋, I'm Ansh Narula, a <span className={basicHighlight}> Software Development Engineer</span> at <span className={basicHighlight}> RedHealth  </span> {" "}, building Uber for ambulances.
-        building AI based UPSC personalized mentor.
       </p>
       <p>
         With  <span className={basicHighlight}>~1.4</span> years of hands-on experience across multiple roles,
