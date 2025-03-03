@@ -10,8 +10,18 @@ const ExperienceSection = () => {
         <h2 className='text-slate-200 text-2xl'>Experience</h2>
       </AnimatedContainer>
       <ul className='group/list'>
-      <Experience
-          link='https://superkalam.com/'
+        <Experience
+          link='https://www.traveloka.com/'
+          delay={0.1}
+          companyName="Traveloka"
+          date='FEB 2025'
+          position='Software Engineer'
+          logo={<Image src="/traveloka.svg" alt='Traveloka' fill />}
+          description='In the Traveloka Merchandising team, I work on aggregating data from multiple content providers to display relevant information to users based on their context.'
+          tags={["Java", "AWS", "System Design", "NextJs", "TypeScript"]}
+        />
+        <Experience
+          link='https://www.red.health/'
           delay={0.1}
           companyName="RedHealth"
           date='JUN 2024'
